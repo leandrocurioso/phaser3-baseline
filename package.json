@@ -1,0 +1,40 @@
+{
+  "name": "phaser3-baseline",
+  "version": "1.2.2",
+  "description": "A base structure for phaser 3",
+  "keywords": [
+    "Phaser",
+    "Phaser 3",
+    "Phaser3",
+    "TypeScript",
+    "Webpack"
+  ],
+  "devDependencies": {
+    "expose-loader": "0.7.5",
+    "ts-loader": "5.3.0",
+    "typescript": "3.1.6",
+    "webpack": "4.25.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-server": "3.1.10"
+  },
+  "dependencies": {
+    "phaser": "3.10.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development && webpack-dev-server --mode development",
+    "build": "webpack --mode production && webpack-dev-server --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leandrocurioso/phaser3-baseline.git"
+  },
+  "author": {
+    "name": "leandrocurioso",
+    "email": "leandro.curioso@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leandrocurioso/phaser3-baseline/issues"
+  },
+  "homepage": "https://github.com/leandrocurioso/phaser3-baseline#readme"
+}
