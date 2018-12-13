@@ -3,10 +3,12 @@ var pathToPhaser = path.join(__dirname, '/node_modules/phaser/');
 var phaser = path.join(pathToPhaser, 'dist/phaser.js');
 
 module.exports = {
+  target: "web",
   entry: './src/game.ts',
   output: {
-    path: path.resolve(__dirname, 'public', 'js'),
     filename: 'bundle.js',
+    path: path.resolve(__dirname, 'public', 'js'),
+    publicPath: path.resolve(__dirname, '/js/')
   },
   module: {
     rules: [
@@ -15,11 +17,13 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.resolve(__dirname, './public'),
-    publicPath: '/',
-    host: '127.0.0.1',
+    contentBase: path.resolve(__dirname, 'public'),
+    publicPath: path.resolve(__dirname, '/js/'),
+    host: '0.0.0.0',
     port: 8080,
-    open: true
+    open: true,
+    watchContentBase: true
+    // compress: true
   },
   resolve: {
     extensions: ['.ts', '.js'],
