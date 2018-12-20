@@ -8,11 +8,11 @@ export class MainScene extends Phaser.Scene {
   }
 
   preload(): void {
-    this.load.image("logo", "./assets/phaser.png");
+    this.load.image("player", "./assets/image/player.png");
   }
 
   create(): void {
-    this.phaserSprite = this.add.sprite(0, 0, "logo");
+    this.phaserSprite = this.add.sprite(0, 0, "player");
     this.phaserSprite .setOrigin(0, 0);
   }
 }
